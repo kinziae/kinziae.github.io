@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.topbanner{
+    padding: 24px 0;
+    background: #f2f2f2;
+}
+
+.topbanner .container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.topbanner h2{
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.040em;
+}
+
+.topbanner p{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em; 
+}
+
+.topbanner a{
+    padding: 3px 30px;
+    border:1px solid #333;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 30px;
+}
+
+.topbanner i{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 20px;
+    background: #333;
+    color: #fff;
+    padding: 7px;
+
+}
+
+.headerwrap{
+
+}
+.headerwrap .container{
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    line-height: 100px;
+
+}
+.headerwrap .container>*{
+    padding: 0 15px;
+}/* >* 자식 선택자 모두 h1, nav form.. */
+
+.headerwrap .gnb{
+    margin-left: auto;
+}
+
+.headerwrap .gnb>ul{
+    display: flex;
+    gap: 50px;
+    color: #333;
+}
+
+.headerwrap .gnb>ul>li{
+    position: relative;
+}
+
+.headerwrap .gnb>ul>li>a{
+    display:block;
+}
+
+.headerwrap .gnb>ul>li::before{
+content:"";
+
+position: absolute;
+top: 50%;
+left: -25px;
+
+display:block;
+width: 1px;
+height: 12px;
+background: #333;
+
+transform: translate(-50%,-50%);
+}
+
+.headerwrap .gnb>ul>li:first-child::before{
+display: none;
+}
+.headerwrap form{
+    /* margin-left: auto; */
+}
+
+#searchform input[type="text"]{
+    outline:none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+#searchform input[type="text"]::placeholder{
+    font-size: small;
+    color: lightgrey;
+   }
+
+   #searchform input[type="text"]:focus::placeholder{ /*눌렀을때*/
+    color: transparent; /*투명하게*/
+   }
+
+   #searchform button{
+       border: none;
+       background: transparent;
+   }
+
+   #searchform button i{
+       color: #fff;
+       background: #333;
+       font-size: 17px;
+       padding: 10px;
+       border-radius: 50%;
+   }
+
+
+/* 메인슬라이드 */
+.mainVisual {
+
+}
+.mainVisual .mainVisualSlide figure {
+    position: relative;
+    height: 600px;
+    color: #fff;
+    text-shadow: 0 0 3px #333;
+}
+
+.mainVisual .mainVisualSlide figure.itm02 {
+    color: #333;
+    text-shadow: 0 0 3px #fff;
+}
+
+
+
+.mainVisual .mainVisualSlide figure h2 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.mainVisual .mainVisualSlide figure.on h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+.mainVisual .mainVisualSlide figure p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.mainVisual .mainVisualSlide figure.on p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual .mainVisualSlide figure a {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #333;
+    color: #fff;
+    text-align:center;
+    border:1px solid #fff;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.mainVisual .mainVisualSlide figure.on a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s 1s;
+}
+
+.mainVisual .mainVisualSlide figure i {
+    vertical-align: middle;
+}
+
+.mainVisual .mainVisualSlide .itm01{
+ background: url(../img/mainvisual01.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainVisualSlide .itm02{
+    background: url(../img/mainvisual02.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainVisualSlide .itm03{
+    background: url(../img/mainvisual03.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainVisualSlide .slogan{
+position: absolute;
+inset: 50% auto auto 50%;
+transform: translate(-50%,-50%);
+width: 1200px;
+padding: 0 15px;
+}
+
+/* 중요함 */
+.conentWrap{
+    padding: 100px 0;
+}
+
+.conentWrap h2{
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    text-align: center;
+
+}
+
+.conentWrap h2::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #333;
+    margin: 20px auto;
+}
+
+.conentWrap p{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.025;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.conentWrap .container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.conentWrap .container figure{
+    flex: 1;
+    padding: 0 15px;
+    text-align: center;
+ 
+}
+
+.conentWrap .container figure .inner{
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+.conentWrap .container figure img{
+    transition: 1s;
+}
+
+.conentWrap .container figure:hover img{
+    transform: scale(1.5);
+}
+
+.conentWrap .container figure strong{
+    display: block;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.conentWrap .container figure a{
+    display: inline-block;
+    border: #333 solid 1px;
+    line-height: 30px;
+    padding: 0 30px;
+}
+
+.conentWrap .container figure a:hover{
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    line-height: 30px;
+    padding: 0 30px;
+}
+
+.eventBanner{
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual01.jpg)no-repeat fixed center center/cover;
+    /* background-color
+       background-image
+       background-repeat
+       background-position-x
+       background-position-y          
+    */
+    filter: grayscale(0.75);
+}
+
+.eventBanner h2{
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    margin: 0 0 10px 0;
+}
+
+.eventBanner p{
+    font-size: 15px;
+    font-weight: 300; 
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+}
+
+.eventBanner i{
+    padding: 7px;
+    background: #333;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+}
+
+.adMovie{
+    padding: 100px 0;
+}
+
+.adMovie .container{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.adMovie .container .txt{
+    padding: 100px 50px;
+}
+
+.adMovie video{
+    width: 100%;
+}
+
+.adMovie .container>*{
+    flex: 1;
+    padding: 0 15px;
+}
+
+.adMovie h2{
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    margin: 0 0 10px 0;
+}
+
+.adMovie p{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+.adMovie i{
+    font-size: 20px;
+    color: #fff;
+    background: #333;
+    padding: 5px;
+}
